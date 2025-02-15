@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "be"
+version = "0.1.0"
+description = ""
+authors = ["Ryan Pham <rqn.pham@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["standard"], version = "^0.115.8"}
+elevenlabs = "^1.51.0"
+python-dotenv = "^1.0.1"
+elasticsearch = {extras = ["async"], version = "^8.17.1"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

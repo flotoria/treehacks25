@@ -11,6 +11,11 @@ fastapi = {extras = ["standard"], version = "^0.115.8"}
 elevenlabs = "^1.51.0"
 python-dotenv = "^1.0.1"
 elasticsearch = {extras = ["async"], version = "^8.17.1"}
+chromadb = "^0.6.3"
+langchain-text-splitters = "^0.3.6"
+langchain-openai = "^0.3.6"
+langchain-groq = "^0.2.4"
+langgraph = "^0.2.73"
 
 
 [build-system]

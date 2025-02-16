@@ -16,6 +16,8 @@ langchain-text-splitters = "^0.3.6"
 langchain-openai = "^0.3.6"
 langchain-groq = "^0.2.4"
 langgraph = "^0.2.73"
+groq = "^0.18.0"
+langchain-core = "^0.3.35"
 
 
 [build-system]

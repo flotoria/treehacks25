@@ -7,6 +7,7 @@ import os
 from llm import do_query
 import json
 from fastapi.middleware.cors import CORSMiddleware
+from langgraph_helper import invoke_graph
 
 app = FastAPI()
 
@@ -29,9 +30,14 @@ class CourseIDAndAssignmentID(BaseModel):
     course_id: str
     assignment_id: str
 
+class Image(BaseModel):
+    base64_image: str
+
 @app.post('/canvas')
 def get_courses(query: Query):
     return do_query(query.query)
+
+
 
 @app.get('/delete')
 def delete_history():
@@ -79,3 +85,6 @@ def rag_specific(obj: CourseIDAndAssignmentID):
     rag_specific_assignment(obj.course_id, obj.assignment_id)
     return "cool"
         
+@app.post("/image-query")
+def image_query(obj: Image):
+    return invoke_graph(obj.base64_image)

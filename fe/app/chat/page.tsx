@@ -109,7 +109,7 @@ export default function ChatPage() {
         setParentLoading={setLoading} 
       />
       <main className="flex-1 p-4 flex flex-col">
-        <div className="flex-1 p-5 overflow-y-auto mb-4 space-y-4 bg-white rounded-xl shadow-md border">
+        <div className="flex-1 p-5 overflow-y-auto mb-4 space-y-4">
           {loading ? (
             <div className="space-y-4">
               <div className="flex items-center gap-4">

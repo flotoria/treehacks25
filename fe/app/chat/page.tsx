@@ -44,7 +44,8 @@ export default function ChatPage() {
   const fetchMessages = async () => {
     const response = await fetch("http://localhost:8000/message");
     const data = await response.json();
-    setMessagesWithGreeting(data);
+    const messageArray = Array.isArray(data) ? data : [];
+    setMessagesWithGreeting(messageArray);
   };
 
   useEffect(() => {
